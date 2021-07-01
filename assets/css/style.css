@@ -1,0 +1,545 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.section-header p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: blue;
+  text-transform: uppercase;
+}
+
+.section-header h2 {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: black;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: white;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: blue;
+  color: white;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+#floatinglogo{
+  position: fixed;
+  display:none;
+  font-size: 20px;
+  font-weight: 500;
+  left: 0;
+  bottom: 5%;
+  z-index: 99999;
+  transition: all 0.4s;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+#floatinglogo li{
+  width:40px;
+  height:40px;
+  border-radius: 20px;
+  padding:0px 10px;
+}
+#floatinglogo li:hover{
+  background: black;
+}
+#floatinglogo .tele{
+    background: blue;
+}
+#floatinglogo .text{
+    background: green;
+    }
+
+@media(max-width: 600px){
+  #floatinglogo{
+    display: block;
+  }
+}
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0;
+}
+
+.header.header-scrolled {
+  background: white;
+  padding: 15px 0;
+}
+
+.header .logo {
+  line-height: 0;
+}
+
+.header .logo img {
+  max-height: 80px;
+  margin-right: 6px;
+}
+
+.header .logo span {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: black;
+  font-family: "Nunito", sans-serif;
+  margin-top: 3px;
+}
+
+@media(max-width: 991px){
+  .header .logo span{
+    font-size:25px;
+  }
+}
+@media(max-width: 800px){
+  .header .logo span{
+    display:none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar li:hover > a {
+  color: blue;
+}
+
+.navbar .getstarted {
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+}
+.navbar .tele{
+  background: blue
+}
+.navbar .text{
+  background: green
+}
+
+.navbar .getstarted:hover {
+  background: black;
+}
+
+@media (max-width: 600px) {
+  .navbar .getstarted{
+    display:none;
+  }
+   .navbar a {
+    padding: 5px;
+  }
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/hero-bg.png) top center no-repeat;
+  background-size: cover;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+}
+
+.hero h2 {
+  color: black;
+  margin: 15px 0 0 0;
+  font-size: 34px;
+}
+
+.hero h3 {
+  color: black;
+  margin: 15px 0 0 0;
+  font-size: 26px;
+}
+
+.hero .btn-get-started {
+  margin-top: 30px;
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: white;
+  background: black;
+}
+
+.hero .btn-get-started span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.hero .btn-get-started i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.hero .btn-get-started .bi-whatsapp{
+  background:green;
+  border-radius: 50%;
+}
+.hero .btn-get-started:hover i {
+  transform: translateX(5px);
+}
+
+.hero .hero-img {
+  text-align: right;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero {
+    height: auto;
+    padding: 120px 0 60px 0;
+  }
+  .hero .hero-img {
+    text-align: center;
+    margin-top: 80px;
+  }
+  .hero .hero-img img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero h2 {
+    font-size: 24px;
+  }
+  .hero .hero-img img {
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .service-box {
+  height: 100%;
+  margin:2px;
+  padding: 60px 30px;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 5px;
+  border-bottom: 3px solid black;
+}
+.services .service-box h3 {
+  color: black;
+  font-weight: 700;
+}
+
+.services .service-box:hover {
+  background: black;
+  color: white;
+}
+
+.services .service-box:hover h3, .services .service-box:hover p{
+  color: white;
+}
+
+/*--------------------------------------------------------------
+# Rate LIst
+--------------------------------------------------------------*/
+.rate-list ul{
+  list-style: none;
+  font-size: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+  font-weight: 400;
+}
+.rate-list ul li{
+  padding: 10px;
+  border-bottom: 1px solid blue;
+}
+
+.ac-img{
+  height: 20em;
+  position:relative;
+  width: 100%;
+}
+
+.ac-img img{
+  max-height: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact{
+  margin-top: 2px;
+  padding:0px;
+}
+.contact .info-box {
+  color: black;
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid black;
+  height: 100%;
+}
+.contact .info-box:hover{
+  color: white;
+  background: black;
+}
+
+.contact .info-box i {
+  font-size: 38px;
+  line-height: 0;
+  color: blue;
+}
+
+.contact .info-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0 10px 0;
+}
+
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.contact .php-email-form {
+  background: white;
+  padding: 30px;
+  height: 100%;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: red;
+  background: white;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: green;
+  background: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid green;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+  border-color: blue;
+}
+
+.contact .php-email-form input {
+  padding: 10px 15px;
+}
+
+.contact .php-email-form textarea {
+  padding: 12px 15px;
+}
+
+.contact .php-email-form button[type="submit"] {
+  background: black;
+  border: 0;
+  padding: 10px 30px;
+  color: white;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: blue;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  background: black;
+  padding: 30px 0;
+  font-size: 14px;
+  text-align: center;
+  color: white;}
